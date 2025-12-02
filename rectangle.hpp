@@ -26,11 +26,18 @@ public:
         cout << "- Largura: " << largura << endl;
         cout << "- Area: " << getArea() << endl;
         cout << "- Perimetro: " << getPerimetro() << endl;
+        
         cout << endl;
+        
         cout << "Representacao do Retangulo:" << endl;
+        
         for (int i = 0; i < altura; ++i) {
             for (int j = 0; j < largura; ++j) {
-                cout << "◻️ ";
+                if (i == 0 || i == altura - 1 || j == 0 || j == largura - 1) {
+                    cout << "# ";
+                } else {
+                    cout << "  ";
+                }
             }
             cout << endl;
         }
